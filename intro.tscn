@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvsrk2m70p626"]
+
+[ext_resource type="Script" uid="uid://c3udlescn1t3t" path="res://intro.gd" id="1_ayt76"]
+[ext_resource type="Texture2D" uid="uid://uwk3e243wlt6" path="res://intro/mico_logo1.png" id="1_s2ta7"]
+[ext_resource type="PackedScene" uid="uid://dx7l7fttne0b6" path="res://intro/intro.tscn" id="3_7a8ye"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ayt76")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(318.5, 247)
+scale = Vector2(0.3951613, 0.29325154)
+texture = ExtResource("1_s2ta7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 637.0
+offset_bottom = 481.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("3_7a8ye")]

@@ -1,0 +1,122 @@
+[gd_scene load_steps=12 format=3 uid="uid://lmxosm220hoq"]
+
+[sub_resource type="GDScript" id="GDScript_h6rdu"]
+script/source = "extends Node2D
+
+var directionLeft = true
+var pSpeed = 5
+var damage = 1
+
+var canMove = true
+var range = 1000
+var startX = 0
+
+var lookLeft = true
+
+func _ready():
+	startX = self.position.x 
+	$AnimatedSprite2D.play(\"idle\")
+
+func _process(delta):
+	if canMove:
+		if directionLeft:
+			self.position.x -= pSpeed
+			if startX - self.position.x  > range:
+				canMove = false
+				explode()
+		else:
+			self.position.x += pSpeed
+			if self.position.x - startX > range:
+				canMove = false
+				explode()
+
+func explode():
+	$AnimatedSprite2D.play(\"explosion\")
+	await get_tree().create_timer(0.3).timeout
+	queue_free()
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"Player\"):
+		canMove = false
+		Global.playerDamage()
+		print(\"Spieler getroffen!\")
+		explode()
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_buihj"]
+load_path = "res://.godot/imported/1.png-1ddfd6a0e49422815905d7348ee849f0.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5fjhv"]
+load_path = "res://.godot/imported/2.png-bb7e6e836a0fdf4b794f51c00818b0e4.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l54pr"]
+load_path = "res://.godot/imported/3.png-e071e1dd1eecef6f5cd9e32315b57343.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_le6ek"]
+load_path = "res://.godot/imported/4.png-a11a3dca984546df007c352f824feb1d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8nhuv"]
+load_path = "res://.godot/imported/5.png-e817fc5752e6240c56391639ed1605ce.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aloyb"]
+load_path = "res://.godot/imported/6.png-ab695f9661146c6b5d1b9b427aec8d3c.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ttybh"]
+load_path = "res://.godot/imported/7.png-b2dce77c478991f110ac0f152554ff1b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8drbi"]
+load_path = "res://.godot/imported/1.png-e01f882938a96ae3aa40cfffcf3c9797.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xemhg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_buihj")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_5fjhv")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_l54pr")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_le6ek")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_8nhuv")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_aloyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ttybh")
+}],
+"loop": true,
+"name": &"explosion",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_8drbi")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yfj2e"]
+radius = 7.07107
+
+[node name="projectile" type="Node2D"]
+script = SubResource("GDScript_h6rdu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xemhg")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_yfj2e")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

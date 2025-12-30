@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr87vkvgirv2c"]
+
+[ext_resource type="Texture2D" uid="uid://b6fvv244ikrxr" path="res://Start (Idle).png" id="1_w7ekc"]
+
+[node name="start" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-2, 1)
+texture = ExtResource("1_w7ekc")
+region_enabled = true
+region_rect = Rect2(0, 28, 24, 36)

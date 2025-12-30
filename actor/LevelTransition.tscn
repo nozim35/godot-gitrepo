@@ -1,0 +1,121 @@
+[gd_scene load_steps=13 format=3 uid="uid://crmbodteora1y"]
+
+[ext_resource type="Texture2D" uid="uid://drtaoj1vmjhst" path="res://End (Pressed) (64x64).png" id="1_1rs7w"]
+
+[sub_resource type="GDScript" id="GDScript_ovm6c"]
+script/source = "extends Node2D
+
+@onready var animSprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var area2d: Area2D = $Area2D
+
+@export var targetLevel: String = \"\"
+
+func _ready() -> void:
+	animSprite.play(\"run\")
+	# Sicherstellen, dass die Verbindung hergestellt ist
+	if not area2d.is_connected(\"body_entered\", Callable(self, \"_on_area_2d_body_entered\")):
+		area2d.body_entered.connect(_on_area_2d_body_entered)
+
+func _on_area_2d_body_entered(body: Node) -> void:
+	if body.is_in_group(\"Player\"):
+		if targetLevel.strip_edges() == \"\":
+			print(\"Fehler: Zielszene ist leer!\")
+			return
+
+		var scene_path = \"res://Levels/\" + targetLevel + \".tscn\"
+		print(\"Wechsel zu: \", scene_path)
+
+		if ResourceLoader.exists(scene_path):
+			# Szenenwechsel sicher verzögern
+			call_deferred(\"_change_scene\", scene_path)
+		else:
+			print(\"Fehler: Szene nicht gefunden - \" + scene_path)
+
+func _change_scene(scene_path: String) -> void:
+	get_tree().change_scene_to_file(scene_path)
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ej0r"]
+atlas = ExtResource("1_1rs7w")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsamj"]
+atlas = ExtResource("1_1rs7w")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anrte"]
+atlas = ExtResource("1_1rs7w")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djquo"]
+atlas = ExtResource("1_1rs7w")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haewo"]
+atlas = ExtResource("1_1rs7w")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npt2x"]
+atlas = ExtResource("1_1rs7w")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivaw7"]
+atlas = ExtResource("1_1rs7w")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bg7oh"]
+atlas = ExtResource("1_1rs7w")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k7kue"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ej0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsamj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anrte")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djquo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haewo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npt2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivaw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bg7oh")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7nr0"]
+size = Vector2(42, 46.75)
+
+[node name="Leveltransition" type="Node2D"]
+z_index = -1
+script = SubResource("GDScript_ovm6c")
+targetLevel = "winner_screen"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_k7kue")
+animation = &"run"
+frame_progress = 0.193538
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 10.375)
+shape = SubResource("RectangleShape2D_g7nr0")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

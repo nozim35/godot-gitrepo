@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cly224f3dhc8i"]
+
+[ext_resource type="Texture2D" uid="uid://d1h2xlpijjqp4" path="res://pixelart_starfields/thorns1.png" id="1_eo6bb"]
+
+[node name="Spikes" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -4.125)
+scale = Vector2(0.105899, 0.160714)
+texture = ExtResource("1_eo6bb")

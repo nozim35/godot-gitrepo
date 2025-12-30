@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://0e88ka8jujc6"]
+
+[ext_resource type="Script" uid="uid://dchhx8ph1y36m" path="res://skripte/DeadLevel.gd" id="1_yn0ya"]
+[ext_resource type="AudioStream" uid="uid://cde8ps67rhljr" path="res://wrong-answer-21-199825.mp3" id="2_vhgno"]
+[ext_resource type="Texture2D" uid="uid://0bj3glpwwqax" path="res://pixelart_starfields/pixelart_starfield.png" id="3_y0u1e"]
+
+[node name="DeadLevel" type="Node2D"]
+script = ExtResource("1_yn0ya")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 332.0
+offset_top = 225.0
+offset_right = 489.0
+offset_bottom = 256.0
+text = "RESTART
+"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 144.0
+offset_top = 225.0
+offset_right = 301.0
+offset_bottom = 256.0
+text = "MENU
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vhgno")
+volume_db = -6.527
+autoplay = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(319, 247.00002)
+scale = Vector2(2.0000002, 1.52344)
+texture = ExtResource("3_y0u1e")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

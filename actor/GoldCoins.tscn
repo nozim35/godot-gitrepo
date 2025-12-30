@@ -1,0 +1,96 @@
+[gd_scene load_steps=14 format=3 uid="uid://l3bfhmko3j82"]
+
+[ext_resource type="Script" path="res://skripte/GoldCoins.gd" id="1_vjoi7"]
+[ext_resource type="Texture2D" uid="uid://cav3ocy56rnlh" path="res://coin_spin-Sheet.png" id="2_v3kg7"]
+[ext_resource type="AudioStream" uid="uid://buruj5jwx86yk" path="res://collectCoin.wav" id="6_px5pg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7nl6"]
+atlas = ExtResource("2_v3kg7")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmkjb"]
+atlas = ExtResource("2_v3kg7")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nggo1"]
+atlas = ExtResource("2_v3kg7")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxlec"]
+atlas = ExtResource("2_v3kg7")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xo5is"]
+atlas = ExtResource("2_v3kg7")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r63ls"]
+atlas = ExtResource("2_v3kg7")
+region = Rect2(400, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c20lm"]
+atlas = ExtResource("2_v3kg7")
+region = Rect2(480, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nyhd"]
+atlas = ExtResource("2_v3kg7")
+region = Rect2(560, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cxqxw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7nl6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmkjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nggo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxlec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xo5is")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r63ls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c20lm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nyhd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttfnx"]
+size = Vector2(13, 13)
+
+[node name="GoldCoins" type="Node2D"]
+script = ExtResource("1_vjoi7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.38419e-07, -3.57628e-07)
+scale = Vector2(0.275, 0.2125)
+sprite_frames = SubResource("SpriteFrames_cxqxw")
+animation = &"idle"
+autoplay = "idle"
+frame = 5
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_ttfnx")
+
+[node name="CoinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_px5pg")
+volume_db = 7.544
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

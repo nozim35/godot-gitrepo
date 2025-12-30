@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdxrnuv06tbu0"]
+
+[ext_resource type="Script" uid="uid://civlquwwk723k" path="res://skripte/winner_screen.gd" id="1_8guyn"]
+[ext_resource type="Texture2D" uid="uid://bxhcu5gn7rdgr" path="res://0facde14-d594-4d07-b721-abab1074fd1a.jpg" id="2_f4vuu"]
+[ext_resource type="Texture2D" uid="uid://cav3ocy56rnlh" path="res://coin_spin-Sheet.png" id="2_s5ecc"]
+[ext_resource type="Texture2D" uid="uid://dhh4fws2vhcju" path="res://pixelart_starfields/pixelart_starfield_corona.png" id="4_chhuy"]
+[ext_resource type="AudioStream" uid="uid://dos5pmad8r0ef" path="res://winning-218995.mp3" id="5_vp7ar"]
+
+[node name="WinnerScreen" type="Node2D"]
+script = ExtResource("1_8guyn")
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="GoldValue" type="RichTextLabel" parent="."]
+offset_left = 330.0
+offset_top = 304.0
+offset_right = 354.0
+offset_bottom = 328.0
+scale = Vector2(2, 2)
+text = "0
+"
+
+[node name="Gold" type="Sprite2D" parent="."]
+position = Vector2(300, 327)
+scale = Vector2(0.4750001, 0.425)
+texture = ExtResource("2_s5ecc")
+region_enabled = true
+region_rect = Rect2(0, 0, 80, 80)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(5.0000005, -2)
+scale = Vector2(0.57284176, 0.63026315)
+texture = ExtResource("4_chhuy")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 1328, 1112, 760)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(321, 165)
+scale = Vector2(0.15837184, 0.16012457)
+texture = ExtResource("2_f4vuu")
+region_enabled = true
+region_rect = Rect2(408, 1870, 2592, 1230)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 145.0
+offset_top = 352.0
+offset_right = 375.0
+offset_bottom = 400.0
+scale = Vector2(1.5, 1.5)
+text = "START MENU"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_vp7ar")
+volume_db = -10.975
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

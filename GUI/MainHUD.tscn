@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://syqi4ckt5leb"]
+
+[ext_resource type="Script" path="res://skripte/MainHUD.gd" id="1_3vp02"]
+[ext_resource type="Texture2D" uid="uid://cav3ocy56rnlh" path="res://coin_spin-Sheet.png" id="2_7fc7s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqk4v"]
+atlas = ExtResource("2_7fc7s")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_42csl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqk4v")
+}],
+"loop": true,
+"name": &"coin",
+"speed": 7.0
+}]
+
+[node name="MainHUD" type="CanvasLayer"]
+script = ExtResource("1_3vp02")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -44.0
+offset_top = 30.0
+offset_right = 16.0
+offset_bottom = 84.0
+grow_horizontal = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="GoldCoinValue" type="RichTextLabel" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+text = "99"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer2"]
+position = Vector2(-14.875, 11.375)
+scale = Vector2(0.246875, 0.215625)
+sprite_frames = SubResource("SpriteFrames_42csl")
+animation = &"coin"
+frame_progress = 1.0
