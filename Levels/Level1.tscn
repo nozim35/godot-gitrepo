@@ -229,7 +229,7 @@ sources/0 = SubResource("TileSetAtlasSource_mh5v7")
 position = Vector2(2056, 63)
 
 [node name="start" parent="." instance=ExtResource("11_wof5x")]
-position = Vector2(-1727, 170)
+position = Vector2(-1547, 220)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("13_em2wx")]
 position = Vector2(-1715, 161)
@@ -249,6 +249,7 @@ position = Vector2(642, 272)
 scale = Vector2(1.5, 1.5)
 
 [node name="plattform2_" parent="Plattform" instance=ExtResource("13_7a6jf")]
+visible = false
 position = Vector2(280, 205)
 
 [node name="plattform2_2" parent="Plattform" instance=ExtResource("13_7a6jf")]
@@ -261,16 +262,19 @@ visible = false
 position = Vector2(420, 249)
 
 [node name="plattform3_" parent="Plattform" instance=ExtResource("13_7a6jf")]
+visible = false
 position = Vector2(454, 219)
 
 [node name="plattform4_" parent="Plattform" instance=ExtResource("13_7a6jf")]
-position = Vector2(2982, 245)
+position = Vector2(3000, 245)
 
 [node name="plattform5_" parent="Plattform" instance=ExtResource("13_7a6jf")]
-position = Vector2(3031, 286)
+position = Vector2(3141, 286)
+scale = Vector2(2, 2)
 
 [node name="plattform6_" parent="Plattform" instance=ExtResource("13_7a6jf")]
 position = Vector2(3834, 219)
+scale = Vector2(1.5, 1.5)
 
 [node name="plattform7_" parent="Plattform" instance=ExtResource("13_7a6jf")]
 position = Vector2(3969, 168)
@@ -286,15 +290,18 @@ position = Vector2(5045, 193)
 
 [node name="plattform11_" parent="Plattform" instance=ExtResource("13_7a6jf")]
 position = Vector2(5155, 138)
+scale = Vector2(2, 2)
 
 [node name="plattform12_" parent="Plattform" instance=ExtResource("13_7a6jf")]
 position = Vector2(5300, 136)
 
 [node name="plattform13_" parent="Plattform" instance=ExtResource("13_7a6jf")]
 position = Vector2(5409, 183)
+scale = Vector2(2, 2)
 
 [node name="plattform14_" parent="Plattform" instance=ExtResource("13_7a6jf")]
 position = Vector2(5761, 191)
+scale = Vector2(2, 2)
 
 [node name="plattform15_" parent="Plattform" instance=ExtResource("13_7a6jf")]
 position = Vector2(5864, 236)
@@ -313,29 +320,35 @@ position = Vector2(6733, 159)
 
 [node name="plattform20_" parent="Plattform" instance=ExtResource("13_7a6jf")]
 position = Vector2(7093, 236)
+scale = Vector2(1.5, 1.5)
 
 [node name="MovePlattform1_" parent="Plattform" instance=ExtResource("14_67w4b")]
 position = Vector2(835, 192)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 
 [node name="MovePlattform2_" parent="Plattform" instance=ExtResource("16_euwme")]
 position = Vector2(1176, 168)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 
 [node name="MovePlattform3_" parent="Plattform" instance=ExtResource("14_67w4b")]
 position = Vector2(1321, 221)
+scale = Vector2(1.5, 1.5)
 
 [node name="MovePlattform4_" parent="Plattform" instance=ExtResource("16_euwme")]
 position = Vector2(1577, 193)
+scale = Vector2(1.5, 1.5)
 
 [node name="MovePlattform5_" parent="Plattform" instance=ExtResource("14_67w4b")]
 position = Vector2(1832, 231)
+scale = Vector2(1.5, 1.5)
 
 [node name="MovePlattform6_" parent="Plattform" instance=ExtResource("16_euwme")]
 position = Vector2(2651, 221)
+scale = Vector2(1.5, 1.5)
 
 [node name="MovePlattform7_" parent="Plattform" instance=ExtResource("16_euwme")]
 position = Vector2(3073, 184)
+scale = Vector2(1.5, 1.5)
 
 [node name="MovePlattform8_" parent="Plattform" instance=ExtResource("14_67w4b")]
 position = Vector2(3271, 229)
@@ -345,21 +358,26 @@ position = Vector2(3509, 184)
 
 [node name="MovePlattform10_" parent="Plattform" instance=ExtResource("16_euwme")]
 position = Vector2(4048, 227)
+scale = Vector2(1.5, 1.5)
 
 [node name="MovePlattform11_" parent="Plattform" instance=ExtResource("16_euwme")]
 position = Vector2(4390, 141)
+scale = Vector2(1.5, 1.5)
 
 [node name="MovePlattform12_" parent="Plattform" instance=ExtResource("14_67w4b")]
 position = Vector2(4596, 212)
+scale = Vector2(1.5, 1.5)
 
 [node name="MovePlattform13_" parent="Plattform" instance=ExtResource("16_euwme")]
 position = Vector2(5487, 233)
 
 [node name="MovePlattform14_" parent="Plattform" instance=ExtResource("16_euwme")]
 position = Vector2(5946, 203)
+scale = Vector2(1.5, 1.5)
 
 [node name="MovePlattform15_" parent="Plattform" instance=ExtResource("14_67w4b")]
 position = Vector2(6291, 213)
+scale = Vector2(1.5, 1.5)
 
 [node name="MovePlattform16_" parent="Plattform" instance=ExtResource("16_euwme")]
 position = Vector2(6746, 208)
@@ -375,7 +393,7 @@ autoplay = true
 script = ExtResource("8_eao5y")
 
 [node name="Leveltransition" parent="." instance=ExtResource("6_twgvs")]
-position = Vector2(4917, 244)
+position = Vector2(5250, 224)
 
 [node name="Spikes" type="Node" parent="."]
 
@@ -803,7 +821,7 @@ position = Vector2(2185, 254)
 motion_mirroring = Vector2(1440, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxScrollingscene/ParallaxBackground/ParallaxLayer2"]
-position = Vector2(656.00006, 127)
+position = Vector2(654.00006, 119)
 scale = Vector2(2.609375, 1.26875)
 texture = ExtResource("12_f5cpa")
 
@@ -811,15 +829,15 @@ texture = ExtResource("12_f5cpa")
 motion_mirroring = Vector2(1440, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxScrollingscene/ParallaxBackground/ParallaxLayer"]
-position = Vector2(1791.9999, 35)
-scale = Vector2(4.507813, 1.8406248)
+position = Vector2(1374, 119.249985)
+scale = Vector2(1.8937498, 1.2703124)
 texture = ExtResource("14_104vp")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxScrollingscene/ParallaxBackground"]
 motion_mirroring = Vector2(1440, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxScrollingscene/ParallaxBackground/ParallaxLayer3"]
-position = Vector2(3656.0002, 135)
+position = Vector2(3531, 119)
 scale = Vector2(2.609375, 1.26875)
 texture = ExtResource("14_104vp")
 
@@ -827,22 +845,22 @@ texture = ExtResource("14_104vp")
 motion_mirroring = Vector2(1440, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxScrollingscene/ParallaxBackground/ParallaxLayer4"]
-position = Vector2(4671, 38)
-scale = Vector2(4.5062504, 1.8468747)
+position = Vector2(4252.5, 118.749985)
+scale = Vector2(1.9031255, 1.2796873)
 texture = ExtResource("14_104vp")
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxScrollingscene/ParallaxBackground"]
 motion_mirroring = Vector2(1440, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxScrollingscene/ParallaxBackground/ParallaxLayer5"]
-position = Vector2(6706, 130.00002)
-scale = Vector2(2.609375, 1.26875)
+position = Vector2(6412.25, 118.000015)
+scale = Vector2(2.6046886, 1.26875)
 texture = ExtResource("14_104vp")
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxScrollingscene/ParallaxBackground"]
 motion_mirroring = Vector2(1440, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxScrollingscene/ParallaxBackground/ParallaxLayer6"]
-position = Vector2(7245, 33)
+position = Vector2(7245.0005, 30.000002)
 scale = Vector2(2.609375, 1.8718749)
 texture = ExtResource("14_104vp")
