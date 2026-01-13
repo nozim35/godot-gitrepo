@@ -70,3 +70,4 @@ pointing/emulate_touch_from_mouse=true
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.23285133, 0.43994638, 0.36670953, 1)
