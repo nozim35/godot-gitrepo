@@ -1,9 +1,12 @@
 extends CharacterBody2D
-#comment
+# comment
+
 const SPEED = 270.0
 const JUMP_VELOCITY = -400.0
+const MAX_JUMPS = 2   # ← Anzahl der Sprünge (2 = Double Jump)
 
 var gravity
+var jumps_left = MAX_JUMPS
 
 @onready var animSprite = $AnimatedSprite2D
 @onready var jumpSound = $jump
@@ -13,7 +16,7 @@ func _ready():
 	gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 	# Beim Start die Richtung für den Idle-Status umdrehen
-	animSprite.flip_h = true  # Ändert die horizontale Ausrichtung
+	animSprite.flip_h = true
 
 func _physics_process(delta):
 	# Schwerkraft anwenden
@@ -24,14 +27,18 @@ func _physics_process(delta):
 		else:
 			animSprite.play("jump3")
 	else:
+		# Sprünge zurücksetzen, sobald man den Boden berührt
+		jumps_left = MAX_JUMPS
+
 		if velocity.x == 0:
 			animSprite.play("idle3")
 		else:
 			animSprite.play("run3")
 
-	# Sprung behandeln
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	# Sprung (inkl. Double Jump)
+	if Input.is_action_just_pressed("jump") and jumps_left > 0:
 		velocity.y = JUMP_VELOCITY
+		jumps_left -= 1
 		jumpSound.play()
 
 	# Bewegung behandeln
