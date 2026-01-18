@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://v0frcumo6t50" path="res://Free/Terrain/Terrain (16x16).png" id="1_7k3uk"]
 [ext_resource type="Texture2D" uid="uid://0bj3glpwwqax" path="res://pixelart_starfields/pixelart_starfield.png" id="3_ce26a"]
 [ext_resource type="AudioStream" uid="uid://betfmkiluvyl6" path="res://gamestart-272829.mp3" id="4_dy5mg"]
-[ext_resource type="Texture2D" uid="uid://uwk3e243wlt6" path="res://intro/mico_logo1.png" id="4_vf0l7"]
+[ext_resource type="Texture2D" uid="uid://cpbk5s67nbo3u" path="res://mico_logo_solo_hd.png" id="4_vf0l7"]
 
 [sub_resource type="GDScript" id="GDScript_cixcu"]
 script/source = "extends Node2D
@@ -206,8 +206,8 @@ format = 2
 position = Vector2(-5, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(323.12506, 238.8438)
-scale = Vector2(2.0054686, 1.5072263)
+position = Vector2(325.62503, 238.8438)
+scale = Vector2(2.0210936, 1.5072263)
 texture = ExtResource("3_ce26a")
 region_rect = Rect2(0, 0, 6000, 3375)
 
@@ -233,8 +233,8 @@ volume_db = -6.47
 autoplay = true
 
 [node name="MicoLogo1" type="Sprite2D" parent="."]
-position = Vector2(328, 199)
-scale = Vector2(0.26612905, 0.17331289)
+position = Vector2(317, 218.99998)
+scale = Vector2(0.06856796, 0.05815626)
 texture = ExtResource("4_vf0l7")
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
