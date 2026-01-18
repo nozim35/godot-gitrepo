@@ -21,3 +21,7 @@ func _process(delta):
 func _on_button_pressed():
 	Global.reset_collectibles()
 	get_tree().change_scene_to_file("res://Levels/StartMenu.tscn")
+
+func _on_button_next_level_pressed():
+	Global.reset_collectibles()
+	get_tree().change_scene_to_file("res://Levels/StartMenu.tscn")

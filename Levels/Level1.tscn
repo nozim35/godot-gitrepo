@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cly224f3dhc8i" path="res://actor/Spikes.tscn" id="15_syoo5"]
 [ext_resource type="PackedScene" uid="uid://cfi12h6mjxvde" path="res://actor/MovePlattform2.tscn" id="16_euwme"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mh5v7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_104vp"]
 texture = ExtResource("1_tukah")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -223,7 +223,7 @@ texture = ExtResource("1_tukah")
 [sub_resource type="TileSet" id="TileSet_m1131"]
 physics_layer_0/collision_layer = 2
 physics_layer_0/collision_mask = 7
-sources/0 = SubResource("TileSetAtlasSource_mh5v7")
+sources/0 = SubResource("TileSetAtlasSource_104vp")
 
 [node name="Level1" type="Node2D"]
 position = Vector2(2056, 63)

@@ -10,7 +10,6 @@
 script = ExtResource("1_8guyn")
 
 [node name="TileMap" type="TileMap" parent="."]
-visible = false
 format = 2
 
 [node name="GoldValue" type="RichTextLabel" parent="."]
@@ -35,7 +34,7 @@ region_rect = Rect2(0, 0, 80, 80)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(-5.9999986, -4)
-scale = Vector2(2.028125, 1.5406251)
+scale = Vector2(2.0375, 1.53125)
 texture = ExtResource("4_chhuy")
 centered = false
 region_rect = Rect2(0, 1328, 1112, 760)
@@ -46,10 +45,10 @@ scale = Vector2(0.63068175, 0.41343284)
 texture = ExtResource("4_f8xel")
 region_rect = Rect2(408, 1870, 2592, 1230)
 
-[node name="Button" type="Button" parent="."]
+[node name="Button_Start" type="Button" parent="."]
 offset_left = 145.0
 offset_top = 352.0
-offset_right = 375.0
+offset_right = 262.3333
 offset_bottom = 400.0
 scale = Vector2(1.5, 1.5)
 text = "START MENU"
@@ -59,4 +58,13 @@ stream = ExtResource("5_vp7ar")
 volume_db = -10.975
 autoplay = true
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Button_next level" type="Button" parent="."]
+offset_left = 341.0
+offset_top = 351.0
+offset_right = 459.0
+offset_bottom = 398.33334
+scale = Vector2(1.5, 1.5)
+text = "NEXT LEVEL"
+
+[connection signal="pressed" from="Button_Start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button_next level" to="." method="_on_button_next_level_pressed"]
