@@ -1,10 +1,11 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1768747329
+::res://::1768772170
 0facde14-d594-4d07-b721-abab1074fd1a.jpg::CompressedTexture2D::4015373467113321105::1767114016::1767114090::1::::<><><>0<>0<>ecdde7dcd34f8d6f25dc2fcb9204d641<>res://.godot/imported/0facde14-d594-4d07-b721-abab1074fd1a.jpg-c38d6c324cb92de4e66286900e3278b6.ctex::
 coin_spin-Sheet.png::CompressedTexture2D::4817918520660765929::1767114018::1767114087::1::::<><><>0<>0<>42b4b6d6787e408ad9de6d80f83ec8fe<>res://.godot/imported/coin_spin-Sheet.png-9fd300725f488ab55be9896555a9e8a1.ctex::
 collectCoin.wav::AudioStreamWAV::3826523980908631086::1767114016::1767114090::1::::<><><>0<>0<>7c4b8be3069afe7e64df52d1be97d56c<>res://.godot/imported/collectCoin.wav-f12ce3047bc8c2260301f061fe5b7262.sample::
 collectRed.wav::AudioStreamWAV::8464684867742695273::1767114017::1767114090::1::::<><><>0<>0<>4f18b2db2fb044de689f579d7bcedd6c<>res://.godot/imported/collectRed.wav-4d89bee8f1b89ef98c51ccd4623d3a55.sample::
 End (Pressed) (64x64).png::CompressedTexture2D::8391721085213266491::1767114017::1767114087::1::::<><><>0<>0<>4c42ef6ff2cfff9cbf690dc24f2eb5c8<>res://.godot/imported/End (Pressed) (64x64).png-0df7924d2d99dc07cdb219bb3e7f937f.ctex::
+export_presets.cfg::TextFile::-1::1768772162::0::1::::<><><>0<>0<><>::
 fun-with-my-8-bit-game-301278.mp3::AudioStreamMP3::3660440405903071368::1767114016::1767114087::1::::<><><>0<>0<>ed572a8cc5a607f17582a8f5b888ba8f<>res://.godot/imported/fun-with-my-8-bit-game-301278.mp3-1107f2534d47cf8a358e28c5590d5c08.mp3str::
 game-music-loop-7-145285.mp3::AudioStreamMP3::750116743406006981::1767114016::1767114087::1::::<><><>0<>0<>472e2049220d98196aca70d2318782a3<>res://.godot/imported/game-music-loop-7-145285.mp3-a22d9f9e84d3c5965999ed67c276c5b5.mp3str::
 gamestart-272829.mp3::AudioStreamMP3::2706724788182364093::1767114017::1767114087::1::::<><><>0<>0<>a425d59a5a7ae156aad3a812d8167b63<>res://.godot/imported/gamestart-272829.mp3-0facb8121c20b206098e6d7d8a6c3617.mp3str::
@@ -22,6 +23,7 @@ README.md::TextFile::-1::1767114014::0::1::::<><><>0<>0<><>::
 so-happy-with-my-8-bit-game-301275.mp3::AudioStreamMP3::1834072823126732750::1767114016::1767114087::1::::<><><>0<>0<>05567fdd7c4cec4a8e836e61d8fbf2d0<>res://.godot/imported/so-happy-with-my-8-bit-game-301275.mp3-1a2e6e8d855555b4f2be8cbc1ba2a40f.mp3str::
 Start (Idle).png::CompressedTexture2D::4573910748021015827::1767114018::1767114087::1::::<><><>0<>0<>3ef581a0fa8e5e7e238e99e76b72d9db<>res://.godot/imported/Start (Idle).png-3ea16e7d1106bb492aec334be6560b8f.ctex::
 Start (Moving) (64x64).png::CompressedTexture2D::8456650704549579519::1767114017::1767114087::1::::<><><>0<>0<>cd4a0ce2af0c96eea76e17e28167cbef<>res://.godot/imported/Start (Moving) (64x64).png-b7a2cb0a5cb4d5369818f4f624234051.ctex::
+Tile_27.png::CompressedTexture2D::4877782889894860247::1768772162::1768772162::1::::<><><>0<>0<>56efc3f1df20b1755c1ccfe3b2da59d7<>res://.godot/imported/Tile_27.png-cbef5163a159f6f5b173cb0c6a7579c3.ctex::
 Unknown-57e83699-3a44-4525-b388-82f32514f5ea.png::::-1::1767114017::1767114014::0::::<><><>0<>0<>4292fbd2146f294ad185afdbe5f1d013<>::
 winning-218995.mp3::AudioStreamMP3::8180913588737704169::1767114017::1767114087::1::::<><><>0<>0<>5b4955e4df2dc774d822e576bdc458d8<>res://.godot/imported/winning-218995.mp3-e3560c5ca165ec1d3acaa236981caa70.mp3str::
 wrong-answer-21-199825.mp3::AudioStreamMP3::4993696851772584055::1767114017::1767114087::1::::<><><>0<>0<>750270f76165f66baa13929f50d1b1e7<>res://.godot/imported/wrong-answer-21-199825.mp3-b8b6f8b49c78f6393978d1cb215cde7a.mp3str::
@@ -100,11 +102,14 @@ Attack Effect 03.png::CompressedTexture2D::685085503579770519::1767114019::17671
 ::res://Free/::1768744553
 ::res://Free/Terrain/::1767114087
 Terrain (16x16).png::CompressedTexture2D::1525909240218353849::1767114017::1767114087::1::::<><><>0<>0<>33613a2b8ef69065caaf4c92d4617d8f<>res://.godot/imported/Terrain (16x16).png-dca9e7d7dba2699145ff949a79aaa365.ctex::
-::res://GameExport/::1767114087
+::res://GameExport/::1768772162
 export_presets.cfg::TextFile::-1::1767114014::0::1::::<><><>0<>0<><>::
 index.apple-touch-icon.png::CompressedTexture2D::5368024742004040668::1767114017::1767114087::1::::<><><>0<>0<>244ebcff587bc0844f1cf0f597bf8f65<>res://.godot/imported/index.apple-touch-icon.png-b8a42323a22039ed0ead4acaddd3ba68.ctex::
 index.icon.png::CompressedTexture2D::4012595839542864391::1767114017::1767114087::1::::<><><>0<>0<>e600ba30bfa07582d92aa40bf1c6516f<>res://.godot/imported/index.icon.png-22f1873ca340b1a4c06f171529ee22f3.ctex::
 index.png::CompressedTexture2D::8149043246894944169::1767114017::1767114087::1::::<><><>0<>0<>ad5b46528e5b29a18f8613a75250eb5e<>res://.godot/imported/index.png-5ee327ab303797dd1e28b2558d28f00c.ctex::
+Mico on the Edge.apple-touch-icon.png::CompressedTexture2D::1204479410694525907::1768772162::1768772162::1::::<><><>0<>0<>50a765ec097c117d83b5ea4abfc6a7cd<>res://.godot/imported/Mico on the Edge.apple-touch-icon.png-07b33ce67d3e61aee1e1c36b6052434a.ctex::
+Mico on the Edge.icon.png::CompressedTexture2D::8297575145984387557::1768772162::1768772162::1::::<><><>0<>0<>4e8ac6b637559c17f218ee585ab7e1a3<>res://.godot/imported/Mico on the Edge.icon.png-8ef73eff2350a2de90ebdc8c879015b1.ctex::
+Mico on the Edge.png::CompressedTexture2D::2537126052006348954::1768772162::1768772162::1::::<><><>0<>0<>1d4e044abd1cea6babd7a8d458c8e51d<>res://.godot/imported/Mico on the Edge.png-8f2198315a2e5ac9bdbcc40a38cf1314.ctex::
 ::res://Gold Coin/::1767114087
 01.png::CompressedTexture2D::4959703180346401511::1767114019::1767114087::1::::<><><>0<>0<>3583a24846657ceb23ea905ad5d4f6ed<>res://.godot/imported/01.png-745f4155a0ce45d59b7e17ae52b9d82d.ctex::
 02.png::CompressedTexture2D::5106689733378059617::1767114019::1767114087::1::::<><><>0<>0<>18ff7d6094b56005aedaa33d6da6ec74<>res://.godot/imported/02.png-12a924d3acca8181d3de9b96770eef39.ctex::
@@ -115,19 +120,19 @@ MainHUD.tscn::PackedScene::1313931536565219733::1767114014::0::1::::<><><>0<>0<>
 ::res://intro/::1767114088
 intro.tscn::PackedScene::8840390868058214837::1767114014::0::1::::<><><>0<>0<><>::
 mico_logo1.png::CompressedTexture2D::1449850608666007073::1767114016::1767114088::1::::<><><>0<>0<>53b99de65fb6a7ef7d390e0176ebd8c2<>res://.godot/imported/mico_logo1.png-587f27611ce6381daf452120f1a1cc0c.ctex::
-::res://Levels/::1768747170
+::res://Levels/::1768772162
 Background.png::CompressedTexture2D::3147450866838074814::1768303760::1768303761::1::::<><><>0<>0<>123f9f0420d395bac5d347d84b4daed4<>res://.godot/imported/Background.png-ae5f3ce6c13142911d0666fae727f224.ctex::
 DeadLevel.tscn::PackedScene::1765041720672897623::1767114014::0::1::::<><><>0<>0<><>::uid://dchhx8ph1y36m::::res://skripte/DeadLevel.gd<>uid://cde8ps67rhljr::::res://wrong-answer-21-199825.mp3<>uid://0bj3glpwwqax::::res://pixelart_starfields/pixelart_starfield.png
-Level1.tscn::PackedScene::7752233769550629955::1768744864::0::1::::<><><>0<>0<><>::uid://l3bfhmko3j82::::res://actor/GoldCoins.tscn<>uid://v0frcumo6t50::::res://Free/Terrain/Terrain (16x16).png<>uid://crmbodteora1y::::res://actor/LevelTransition.tscn<>uid://bn2bubq1kt088::::res://actor/DeadZone.tscn<>uid://rdne2qwocosw::::res://i-love-my-8-bit-game-console-301272.mp3<>uid://monn74h7lb8m::::res://skripte/AudioStreamPlayer2.gd<>uid://dr87vkvgirv2c::::res://actor/start.tscn<>uid://cevfovghm1esg::::res://actor/plattform.tscn<>uid://c87ky6d886m3f::::res://actor/character_body_2d2.tscn<>uid://bk3wb5whi7jyk::::res://Levels/Background.png<>uid://b7w22otg6qyo6::::res://actor/MovePlattform.tscn<>uid://dhh4fws2vhcju::::res://pixelart_starfields/pixelart_starfield_corona.png<>uid://cly224f3dhc8i::::res://actor/Spikes.tscn<>uid://cfi12h6mjxvde::::res://actor/MovePlattform2.tscn
+Level1.tscn::PackedScene::7752233769550629955::1768772162::0::1::::<><><>0<>0<><>::uid://l3bfhmko3j82::::res://actor/GoldCoins.tscn<>uid://v0frcumo6t50::::res://Free/Terrain/Terrain (16x16).png<>uid://crmbodteora1y::::res://actor/LevelTransition.tscn<>uid://cbq3mvrfbus84::::res://Tile_27.png<>uid://bn2bubq1kt088::::res://actor/DeadZone.tscn<>uid://rdne2qwocosw::::res://i-love-my-8-bit-game-console-301272.mp3<>uid://monn74h7lb8m::::res://skripte/AudioStreamPlayer2.gd<>uid://dr87vkvgirv2c::::res://actor/start.tscn<>uid://cevfovghm1esg::::res://actor/plattform.tscn<>uid://c87ky6d886m3f::::res://actor/character_body_2d2.tscn<>uid://bk3wb5whi7jyk::::res://Levels/Background.png<>uid://b7w22otg6qyo6::::res://actor/MovePlattform.tscn<>uid://dhh4fws2vhcju::::res://pixelart_starfields/pixelart_starfield_corona.png<>uid://cly224f3dhc8i::::res://actor/Spikes.tscn<>uid://cfi12h6mjxvde::::res://actor/MovePlattform2.tscn
 Levelmenu.tscn::PackedScene::7633072911140681853::1767114014::0::1::::<><><>0<>0<><>::uid://v0frcumo6t50::::res://Free/Terrain/Terrain (16x16).png<>uid://dcjlxqd6w6egf::::res://actor/Shooter.tscn<>uid://bhoi37epiff8b::::res://nature_6/1.png<>uid://c8tip6oovdvok::::res://nature_6/3.png<>uid://tob4c61rpebn::::res://Sound/menumainsound.wav
-StartMenu.tscn::PackedScene::5036321043206565058::1768747170::0::1::::<><><>0<>0<><>::uid://v0frcumo6t50::::res://Free/Terrain/Terrain (16x16).png<>uid://0bj3glpwwqax::::res://pixelart_starfields/pixelart_starfield.png<>uid://betfmkiluvyl6::::res://gamestart-272829.mp3<>uid://c3et8jl8nllkh::::res://mico_logo_solo.png
-winner_screen.tscn::PackedScene::5031945074927423917::1768746814::0::1::::<><><>0<>0<><>::uid://civlquwwk723k::::res://skripte/winner_screen.gd<>uid://cav3ocy56rnlh::::res://coin_spin-Sheet.png<>uid://dhh4fws2vhcju::::res://pixelart_starfields/pixelart_starfield_corona.png<>uid://b0s2e7v143ugr::::res://mico_win_image.png<>uid://dos5pmad8r0ef::::res://winning-218995.mp3
+StartMenu.tscn::PackedScene::5036321043206565058::1768747403::0::1::::<><><>0<>0<><>::uid://v0frcumo6t50::::res://Free/Terrain/Terrain (16x16).png<>uid://0bj3glpwwqax::::res://pixelart_starfields/pixelart_starfield.png<>uid://betfmkiluvyl6::::res://gamestart-272829.mp3<>uid://cpbk5s67nbo3u::::res://mico_logo_solo_hd.png
+winner_screen.tscn::PackedScene::5031945074927423917::1768749154::0::1::::<><><>0<>0<><>::uid://civlquwwk723k::::res://skripte/winner_screen.gd<>uid://cav3ocy56rnlh::::res://coin_spin-Sheet.png<>uid://dhh4fws2vhcju::::res://pixelart_starfields/pixelart_starfield_corona.png<>uid://b0s2e7v143ugr::::res://mico_win_image.png<>uid://dos5pmad8r0ef::::res://winning-218995.mp3
 ::res://pixelart_starfields/::1767114087
 pixelart_starfield.png::CompressedTexture2D::1757382256713868039::1767114017::1767114087::1::::<><><>0<>0<>fcba7c782c6708897613be8ce1ed9ef6<>res://.godot/imported/pixelart_starfield.png-9b6977f4a591681ca5f7545e2bb7ee6d.ctex::
 pixelart_starfield_corona.png::CompressedTexture2D::7666805507158980150::1767114017::1767114087::1::::<><><>0<>0<>f6ec0b49f65146ddb770e3c131defbd5<>res://.godot/imported/pixelart_starfield_corona.png-5f165523bbfb3f977aad8621880f5f09.ctex::
 pixelart_starfield_diagonal_diffraction_spikes.png::CompressedTexture2D::2692095310813456425::1767114017::1767114087::1::::<><><>0<>0<>10602fd3366f5e42a36502545072eab1<>res://.godot/imported/pixelart_starfield_diagonal_diffraction_spikes.png-50f8cce7d02dca484755ab7581a9dcef.ctex::
 thorns1.png::CompressedTexture2D::9000303663315871731::1767114017::1767114087::1::::<><><>0<>0<>c77ceb1cacf95c3fee4820d65c07c001<>res://.godot/imported/thorns1.png-1c4a39888492732792af63f0512e4e37.ctex::
-::res://skripte/::1768675930
+::res://skripte/::1768748988
 AudioStreamPlayer2.gd::GDScript::871981674347731178::1767114014::0::1::::<>AudioStreamPlayer<><>0<>0<><>::
 AudioStreamPlayer.gd::GDScript::2563643689531541013::1767114014::0::1::::<>AudioStreamPlayer<><>0<>0<><>::
 character_body_2d2.gd::GDScript::6363763693793554452::1768329916::0::1::::<>CharacterBody2D<><>0<>0<><>::
@@ -139,4 +144,4 @@ GoldCoins.gd::GDScript::7086307152755812574::1767114014::0::1::::<>Node2D<><>0<>
 MainHUD.gd::GDScript::7743714708475726924::1767114014::0::1::::<>CanvasLayer<><>0<>0<><>::
 Plattform.gd::GDScript::2638257414503820537::1768413157::0::1::::<>AnimatableBody2D<><>0<>0<><>::
 StartMenu.gd::GDScript::2965023741277721922::1767114014::0::1::::<>Node2D<><>0<>0<><>::
-winner_screen.gd::GDScript::5378401594415558542::1767114014::0::1::::<>Node2D<><>0<>0<><>::
+winner_screen.gd::GDScript::5378401594415558542::1768748988::0::1::::<>Node2D<><>0<>0<><>::

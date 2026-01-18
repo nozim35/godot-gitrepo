@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://dipifmfdc8ncd"]
+[gd_scene load_steps=21 format=3 uid="uid://dipifmfdc8ncd"]
 
 [ext_resource type="PackedScene" uid="uid://l3bfhmko3j82" path="res://actor/GoldCoins.tscn" id="1_oq250"]
 [ext_resource type="Texture2D" uid="uid://v0frcumo6t50" path="res://Free/Terrain/Terrain (16x16).png" id="1_tukah"]
 [ext_resource type="PackedScene" uid="uid://crmbodteora1y" path="res://actor/LevelTransition.tscn" id="6_twgvs"]
+[ext_resource type="Texture2D" uid="uid://cbq3mvrfbus84" path="res://Tile_27.png" id="7_3momc"]
 [ext_resource type="PackedScene" uid="uid://bn2bubq1kt088" path="res://actor/DeadZone.tscn" id="7_5ioq1"]
 [ext_resource type="AudioStream" uid="uid://rdne2qwocosw" path="res://i-love-my-8-bit-game-console-301272.mp3" id="8_104vp"]
 [ext_resource type="Script" uid="uid://monn74h7lb8m" path="res://skripte/AudioStreamPlayer2.gd" id="8_eao5y"]
@@ -225,6 +226,68 @@ physics_layer_0/collision_layer = 2
 physics_layer_0/collision_mask = 7
 sources/0 = SubResource("TileSetAtlasSource_104vp")
 
+[sub_resource type="Animation" id="Animation_sbm5j"]
+resource_name = "lava_animation"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.9876664, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-14.11, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_p2sgf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.050776288, -35.131405)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ufevr"]
+_data = {
+&"RESET": SubResource("Animation_p2sgf"),
+&"lava_animation": SubResource("Animation_sbm5j")
+}
+
 [node name="Level1" type="Node2D"]
 position = Vector2(2056, 63)
 
@@ -400,6 +463,21 @@ scale = Vector2(1.5, 1.5)
 
 [node name="MovePlattform16_" parent="Plattform" instance=ExtResource("16_euwme")]
 position = Vector2(6746, 208)
+
+[node name="Lava" type="Node2D" parent="."]
+position = Vector2(1431, 329)
+rotation = 3.1415925
+scale = Vector2(8901.79, -6.11988)
+
+[node name="Sprite2D" type="Sprite2D" parent="Lava"]
+position = Vector2(0.050776288, -35.131405)
+scale = Vector2(0.0037428967, 0.5)
+texture = ExtResource("7_3momc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Lava/Sprite2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_ufevr")
+}
 
 [node name="Deadzone" parent="." instance=ExtResource("7_5ioq1")]
 position = Vector2(1431, 329)
@@ -847,9 +925,8 @@ texture = ExtResource("14_3momc")
 motion_mirroring = Vector2(1440, 0)
 
 [node name="Background" type="Sprite2D" parent="ParallaxScrollingscene/ParallaxBackground/ParallaxLayer"]
-visible = false
 z_index = -1
-position = Vector2(1532.5, 0.49998093)
+position = Vector2(4414.9995, 2.9999995)
 scale = Vector2(1.0377154, 0.99243385)
 texture = ExtResource("14_3momc")
 
@@ -868,7 +945,7 @@ texture = ExtResource("14_3momc")
 motion_mirroring = Vector2(1440, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxScrollingscene/ParallaxBackground/ParallaxLayer5"]
-position = Vector2(4660.0005, 6.000002)
+position = Vector2(5617, 0.9999981)
 scale = Vector2(1.5643861, 0.98675907)
 texture = ExtResource("14_3momc")
 
